@@ -23,7 +23,7 @@ class ViewWithTableView: UIView {
         self.addSubview(view as! UIView)
     }
     override func awakeFromNib() {
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 120, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 180, right: 0)
         tableView.register(UINib(nibName: ProfileTableViewCell.IdentifierString(), bundle: nil), forCellReuseIdentifier: ProfileTableViewCell.IdentifierString())
         tableView.register(UINib(nibName: ImageViewTableViewCell.IdentifierString(), bundle: nil), forCellReuseIdentifier: ImageViewTableViewCell.IdentifierString())
         tableView.delegate = self
@@ -57,7 +57,6 @@ class ViewWithTableView: UIView {
                     self.tableView.es.stopLoadingMore()
                 }
                 else{
-                    self.tableView.es.resetNoMoreData()
                     self.loadData(profileDatas: data)
                     self.refreshControl.endRefreshing()
             }

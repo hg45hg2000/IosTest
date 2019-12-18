@@ -36,7 +36,7 @@ extension ViewController : SelectedViewDeleagate {
                 team = .rangers
             default: break
             }
-            
+        contentTableView.tableView.setContentOffset(CGPoint.zero, animated: false)
         contentTableView.loadProfileAPI(team: team, page: 0, loadMore: false)
         }
 }
