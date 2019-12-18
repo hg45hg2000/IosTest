@@ -23,6 +23,7 @@ class ViewWithTableView: UIView {
         self.addSubview(view as! UIView)
     }
     override func awakeFromNib() {
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 120, right: 0)
         tableView.register(UINib(nibName: ProfileTableViewCell.IdentifierString(), bundle: nil), forCellReuseIdentifier: ProfileTableViewCell.IdentifierString())
         tableView.register(UINib(nibName: ImageViewTableViewCell.IdentifierString(), bundle: nil), forCellReuseIdentifier: ImageViewTableViewCell.IdentifierString())
         tableView.delegate = self
@@ -30,11 +31,7 @@ class ViewWithTableView: UIView {
         refreshControl = UIRefreshControl()
         tableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(refreshPull), for: UIControl.Event.valueChanged)
-        self.tableView.es.addInfiniteScrolling {
-            [unowned self] in
-            /// Do anything you want...
-            /// ...
-            /// If common end
+        self.tableView.es.addInfiniteScrolling { [unowned self] in
             self.viewModel.currentPageIndex = self.viewModel.currentPageIndex + 1
             self.loadProfileAPI(team: self.viewModel.selectedTeam, page: self.viewModel.currentPageIndex, loadMore: true)
         }
@@ -48,8 +45,9 @@ class ViewWithTableView: UIView {
         viewModel.currentPageIndex = page
         CatalogAPI.requestCatalogData(team: team, page: page) { (data) in
                 if loadMore {
+                    // Infinite load
                     if data.results.count == 0 {
-                        self.tableView.es.noticeNoMoreData()
+                        self.loadProfileAPI(team: self.viewModel.selectedTeam, page: 0 , loadMore: true)
                     }else{
                         for result in data.results {
                               self.viewModel.profileData.results.append(result)
