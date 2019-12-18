@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Team : String{
+enum Team : String , Codable{
     case rangers
     case elastic
     case dynamo

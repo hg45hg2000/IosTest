@@ -8,19 +8,26 @@
 
 import UIKit
 import ESPullToRefresh
+protocol ViewWithTableViewDataSource : NSObjectProtocol{
+    func ViewWithTableViewNumberOfViewModel()->ViewModel
+}
+
+
 class ViewWithTableView: UIView {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel = ViewModel()
+    weak var dataSource : ViewWithTableViewDataSource?
+    
+    var viewModel : ViewModel!
     
     var refreshControl:UIRefreshControl!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         // adding the top level view to the view hierarchy
-        let view = (Bundle.main.loadNibNamed(ViewWithTableView.IdentifierString(), owner: self, options: nil)![0])
-        self.addSubview(view as! UIView)
+        let view = (Bundle.main.loadNibNamed(ViewWithTableView.IdentifierString(), owner: self, options: nil)![0])as! UIView
+        self.addSubview(view)
     }
     override func awakeFromNib() {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 180, right: 0)
@@ -31,44 +38,55 @@ class ViewWithTableView: UIView {
         refreshControl = UIRefreshControl()
         tableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(refreshPull), for: UIControl.Event.valueChanged)
+        
         self.tableView.es.addInfiniteScrolling { [unowned self] in
             self.viewModel.currentPageIndex = self.viewModel.currentPageIndex + 1
-            self.loadProfileAPI(team: self.viewModel.selectedTeam, page: self.viewModel.currentPageIndex, loadMore: true)
+            self.loadProfileAPI(viewModel: self.viewModel, loadMore: true, completion: { })
         }
     }
     @objc func refreshPull(){
-        loadProfileAPI(team: viewModel.selectedTeam, page: 0, loadMore: false)
+        viewModel.currentPageIndex = 0
+        loadProfileAPI(viewModel: viewModel, loadMore: false, completion: { })
     }
     
-    func loadProfileAPI(team : Team , page: Int,loadMore:Bool){
-        viewModel.selectedTeam = team
-        viewModel.currentPageIndex = page
-        CatalogAPI.requestCatalogData(team: team, page: page) { (data) in
+    func loadProfileAPI(viewModel:ViewModel,loadMore:Bool, completion: @escaping () -> Void){
+        self.viewModel = viewModel
+        CatalogAPI.requestCatalogData(team: viewModel.selectedTeam, page: viewModel.currentPageIndex ) { (data) in
                 if loadMore {
                     // Infinite load
                     if data.results.count == 0 {
-                        self.loadProfileAPI(team: self.viewModel.selectedTeam, page: 0 , loadMore: true)
+                        self.viewModel.currentPageIndex = 0
+                        self.loadProfileAPI(viewModel: viewModel, loadMore: true, completion:{ })
                     }else{
                         for result in data.results {
                               self.viewModel.profileData.results.append(result)
                           }
                     }
-                    self.loadData(profileDatas: self.viewModel.profileData)
+                    self.loadData(profileDatas: viewModel.profileData)
                     self.tableView.es.stopLoadingMore()
                 }
                 else{
+                    self.viewModel.profileData = data
                     self.loadData(profileDatas: data)
                     self.refreshControl.endRefreshing()
             }
+            do {
+
+                // saving the entire list
+                try self.viewModel.profileData.save()
+
+            } catch { print(error) }
+            completion()
          }
      }
      
     private func loadData(profileDatas:ProfileData)  {
-        viewModel.profileData = profileDatas
          DispatchQueue.main.async {
-             self.tableView.reloadData()
+            self.tableView.reloadData()
+            self.tableView.layoutIfNeeded()
          }
      }
+
 }
 extension ViewWithTableView : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

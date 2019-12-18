@@ -33,6 +33,9 @@
 		BA85A8CD23A9E557006D14DE /* SelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8CC23A9E557006D14DE /* SelectedView.swift */; };
 		BA85A8CF23A9E563006D14DE /* SelectedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA85A8CE23A9E563006D14DE /* SelectedView.xib */; };
 		BA85A8D123AA005D006D14DE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8D023AA005D006D14DE /* BaseViewController.swift */; };
+		BA85A8D523AA20D5006D14DE /* TableViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8D323AA20D5006D14DE /* TableViewCollectionViewCell.swift */; };
+		BA85A8D623AA20D5006D14DE /* TableViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA85A8D423AA20D5006D14DE /* TableViewCollectionViewCell.xib */; };
+		BAB9E68423AA535000F3EE8C /* ViewModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9E68323AA535000F3EE8C /* ViewModelList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		BA85A8CC23A9E557006D14DE /* SelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedView.swift; sourceTree = "<group>"; };
 		BA85A8CE23A9E563006D14DE /* SelectedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedView.xib; sourceTree = "<group>"; };
 		BA85A8D023AA005D006D14DE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BA85A8D323AA20D5006D14DE /* TableViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA85A8D423AA20D5006D14DE /* TableViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		BAB9E68323AA535000F3EE8C /* ViewModelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				BA85A8B823A91399006D14DE /* ViewModel.swift */,
+				BAB9E68323AA535000F3EE8C /* ViewModelList.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -249,6 +256,7 @@
 		BA85A8BA23A915F6006D14DE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA85A8D223AA20A8006D14DE /* CollectionViewCell */,
 				BA85A8CB23A9E53E006D14DE /* SelectedView */,
 				BA85A8BF23A91987006D14DE /* TableViewCell */,
 				BA85A8BB23A9161F006D14DE /* ViewWithTableView.swift */,
@@ -283,6 +291,15 @@
 				BA85A8CE23A9E563006D14DE /* SelectedView.xib */,
 			);
 			path = SelectedView;
+			sourceTree = "<group>";
+		};
+		BA85A8D223AA20A8006D14DE /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A8D323AA20D5006D14DE /* TableViewCollectionViewCell.swift */,
+				BA85A8D423AA20D5006D14DE /* TableViewCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +413,7 @@
 			files = (
 				BA85A8CF23A9E563006D14DE /* SelectedView.xib in Resources */,
 				BA85A8BE23A9183C006D14DE /* ViewWithTableView.xib in Resources */,
+				BA85A8D623AA20D5006D14DE /* TableViewCollectionViewCell.xib in Resources */,
 				BA85A8C323A91995006D14DE /* ProfileTableViewCell.xib in Resources */,
 				BA85A88823A8F7D3006D14DE /* LaunchScreen.storyboard in Resources */,
 				BA85A88523A8F7D3006D14DE /* Assets.xcassets in Resources */,
@@ -533,6 +551,8 @@
 				BA85A88023A8F7D3006D14DE /* ViewController.swift in Sources */,
 				BA85A8B323A8FC33006D14DE /* Network.swift in Sources */,
 				BA85A8B623A90A01006D14DE /* CatalogAPI.swift in Sources */,
+				BA85A8D523AA20D5006D14DE /* TableViewCollectionViewCell.swift in Sources */,
+				BAB9E68423AA535000F3EE8C /* ViewModelList.swift in Sources */,
 				BA85A8D123AA005D006D14DE /* BaseViewController.swift in Sources */,
 				BA85A8C923A9D4B8006D14DE /* ImageViewTableViewCell.swift in Sources */,
 				BA85A8BC23A9161F006D14DE /* ViewWithTableView.swift in Sources */,

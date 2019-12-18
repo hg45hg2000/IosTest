@@ -39,26 +39,33 @@
                                     <constraint firstAttribute="height" constant="80" id="rra-kC-XWu"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxh-WL-0BK" customClass="ViewWithTableView" customModule="RedsoTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="168" width="414" height="694"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ufU-vv-kdE">
+                                <rect key="frame" x="0.0" y="168" width="414" height="728"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4YB-gQ-Swl">
+                                    <size key="itemSize" width="95" height="71"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" name="systemBrownColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
-                            <constraint firstItem="bxh-WL-0BK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L1N-XZ-Kel"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ufU-vv-kdE" secondAttribute="bottom" constant="-34" id="Lrv-CD-HyL"/>
                             <constraint firstItem="QZd-En-msQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nd1-4z-6rh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxh-WL-0BK" secondAttribute="trailing" id="OCs-tP-Xjh"/>
+                            <constraint firstItem="ufU-vv-kdE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P2R-9A-7rd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QZd-En-msQ" secondAttribute="trailing" id="VuD-IZ-GqP"/>
+                            <constraint firstItem="ufU-vv-kdE" firstAttribute="top" secondItem="QZd-En-msQ" secondAttribute="bottom" id="giP-0K-hP1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ufU-vv-kdE" secondAttribute="trailing" id="l6e-K1-c4t"/>
                             <constraint firstItem="QZd-En-msQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lrx-sK-Tyu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bxh-WL-0BK" secondAttribute="bottom" id="rOI-Wc-9Iy"/>
-                            <constraint firstItem="bxh-WL-0BK" firstAttribute="top" secondItem="QZd-En-msQ" secondAttribute="bottom" id="yIm-fB-XTM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="rqP-j3-M1m"/>
                     <connections>
-                        <outlet property="contentTableView" destination="bxh-WL-0BK" id="ggx-2G-cpc"/>
+                        <outlet property="collectionView" destination="ufU-vv-kdE" id="Cp2-gd-wOO"/>
                         <outlet property="topSelectedView" destination="QZd-En-msQ" id="7zC-Vy-CyS"/>
                     </connections>
                 </viewController>

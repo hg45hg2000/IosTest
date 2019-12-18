@@ -9,34 +9,60 @@
 import UIKit
 class ViewController: UIViewController {
     
-
-    @IBOutlet weak var contentTableView: ViewWithTableView!
-    
     @IBOutlet weak var topSelectedView: SelectedView!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var viewModelList  = ViewModelList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        collectionView.register(UINib(nibName: TableViewCollectionViewCell.IdentifierString(), bundle: nil), forCellWithReuseIdentifier: TableViewCollectionViewCell.IdentifierString())
+        collectionView.delegate = self
+        collectionView.dataSource = self
         topSelectedView.delegate = self
-        contentTableView.loadProfileAPI(team: .rangers, page: 0, loadMore: false)
+        
+        viewModelList = ViewModelList.initLocalData() ?? ViewModelList()
     }
-
+    
             
 }
 extension ViewController : SelectedViewDeleagate {
     
     func selectedViewSelected(selectedIndex: Int) {
-        var team = Team.dynamo
-            switch selectedIndex {
-            case 0:
-                team = .dynamo
-            case 1:
-                team = .elastic
-            case 2:
-                team = .rangers
-            default: break
-            }
-        contentTableView.tableView.setContentOffset(CGPoint.zero, animated: false)
-        contentTableView.loadProfileAPI(team: team, page: 0, loadMore: false)
+        let moveX = collectionView.bounds.width * CGFloat(selectedIndex)
+        let point = CGPoint(x: moveX, y: 0)
+        collectionView.setContentOffset(point, animated: true)
         }
+}
+extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModelList.viewModelList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TableViewCollectionViewCell.IdentifierString(), for: indexPath) as! TableViewCollectionViewCell
+        var viewModel = viewModelList.viewModelList[indexPath.row]
+        if viewModel.profileData == nil {
+            cell.viewWithTableView.loadProfileAPI(viewModel: viewModel, loadMore: false, completion: {
+            
+            } )
+        }
+        return cell
+    }
+    
+    @available(iOS 6.0, *)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        return collectionView.frame.size
+    }
+    @available(iOS 6.0, *)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
+        return UIEdgeInsets.zero
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let page = scrollView.contentOffset.x / scrollView.bounds.width
+        topSelectedView.setselectedIndex(selectedIndex: Int(page))
+    }
 }

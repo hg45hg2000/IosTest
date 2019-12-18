@@ -42,4 +42,18 @@ class SelectedView: UIView {
         }
         delegate?.selectedViewSelected(selectedIndex: sender.tag)
     }
+    func setselectedIndex(selectedIndex:Int){
+        var moveX : CGFloat = 0.0
+        switch selectedIndex {
+        case 0: moveX = rangerButton.frame.origin.x
+        case 1: moveX = elasticButton.frame.origin.x
+        case 2: moveX = dynamoButton.frame.origin.x
+        default:
+            break
+        }
+        UIView.animate(withDuration: 0.3) {
+            self.indicateView.frame.origin.x =  moveX 
+            
+        }
+    }
 }

@@ -5,13 +5,13 @@
 import Foundation
 import SwiftyJSON
 
-enum Type :String{
+enum Type : String ,Codable{
     case employee
     case banner
 }
 
 
-struct ProfileDataResult{
+struct ProfileDataResult  : Codable {
 
 	var avatar : String!
 	var expertise : [String] = []
@@ -34,7 +34,8 @@ struct ProfileDataResult{
         name = json["name"].stringValue
         position = json["position"].stringValue
         type = Type(rawValue: json["type"].stringValue)
-        url = json["url"].stringValue 
+        url = json["url"].stringValue
+        
 	}
 
 	/**
