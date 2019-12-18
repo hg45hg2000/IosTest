@@ -23,8 +23,6 @@ class ViewWithTableView: UIView {
         self.addSubview(view as! UIView)
     }
     override func awakeFromNib() {
-        
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 120, right: 0);
         tableView.register(UINib(nibName: ProfileTableViewCell.IdentifierString(), bundle: nil), forCellReuseIdentifier: ProfileTableViewCell.IdentifierString())
         tableView.register(UINib(nibName: ImageViewTableViewCell.IdentifierString(), bundle: nil), forCellReuseIdentifier: ImageViewTableViewCell.IdentifierString())
         tableView.delegate = self
@@ -50,9 +48,8 @@ class ViewWithTableView: UIView {
         viewModel.currentPageIndex = page
         CatalogAPI.requestCatalogData(team: team, page: page) { (data) in
                 if loadMore {
-                    // Infinite load
                     if data.results.count == 0 {
-                        self.loadProfileAPI(team: self.viewModel.selectedTeam, page: 0, loadMore: true)
+                        self.tableView.es.noticeNoMoreData()
                     }else{
                         for result in data.results {
                               self.viewModel.profileData.results.append(result)
