@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedView" customModule="RedsoTest" customModuleProvider="target">
+            <connections>
+                <outlet property="dynamoButton" destination="6Mf-21-kSh" id="CeD-md-GFA"/>
+                <outlet property="elasticButton" destination="WeX-Xf-2u5" id="X0y-bM-lq2"/>
+                <outlet property="indicateView" destination="gmF-le-uIm" id="aj7-h0-fa1"/>
+                <outlet property="rangerButton" destination="JRc-BB-Qau" id="9rJ-go-lG6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="76"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRc-BB-Qau">
+                    <rect key="frame" x="3.5" y="22" width="57" height="76"/>
+                    <state key="normal" title="Rangers">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPress:" destination="-1" eventType="touchUpInside" id="p3Z-jf-UFp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeX-Xf-2u5">
+                    <rect key="frame" x="90" y="22" width="45" height="76"/>
+                    <state key="normal" title="Elastic">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPress:" destination="-1" eventType="touchUpInside" id="qSV-kp-Z1c"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mf-21-kSh">
+                    <rect key="frame" x="164" y="22" width="57" height="76"/>
+                    <state key="normal" title="Dynamo">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPress:" destination="-1" eventType="touchUpInside" id="i7P-Ts-hHV"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmF-le-uIm">
+                    <rect key="frame" x="0.0" y="71" width="85" height="5"/>
+                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="VF1-Of-0vx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6Mf-21-kSh" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="2Hs-nC-uqc"/>
+                <constraint firstItem="WeX-Xf-2u5" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="5FU-FL-ThF"/>
+                <constraint firstItem="JRc-BB-Qau" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" multiplier="0.2" id="7FM-Vm-MdK"/>
+                <constraint firstItem="6Mf-21-kSh" firstAttribute="height" secondItem="JRc-BB-Qau" secondAttribute="height" id="QJZ-er-fYr"/>
+                <constraint firstItem="JRc-BB-Qau" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="UIo-GA-I0z"/>
+                <constraint firstItem="WeX-Xf-2u5" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" multiplier="0.7" id="UbU-xW-Oce"/>
+                <constraint firstItem="6Mf-21-kSh" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" multiplier="1.2" id="Z07-w2-OvG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gmF-le-uIm" secondAttribute="bottom" id="ZqN-xQ-KTL"/>
+                <constraint firstItem="gmF-le-uIm" firstAttribute="width" secondItem="JRc-BB-Qau" secondAttribute="width" multiplier="1.49123" id="cGl-YT-2PD"/>
+                <constraint firstItem="JRc-BB-Qau" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="dRf-dX-czu"/>
+                <constraint firstItem="gmF-le-uIm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gpO-pb-Z2J"/>
+                <constraint firstItem="WeX-Xf-2u5" firstAttribute="height" secondItem="JRc-BB-Qau" secondAttribute="height" id="rdB-RK-jZH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="55.797101449275367" y="-123.88392857142857"/>
+        </view>
+    </objects>
+</document>

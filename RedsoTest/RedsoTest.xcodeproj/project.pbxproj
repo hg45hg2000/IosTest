@@ -1,0 +1,883 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		126140CBBCEF83D919AFDBBF /* Pods_RedsoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE2820AA7950F4A0FA2FD1 /* Pods_RedsoTest.framework */; };
+		36BF0C80B33A36E5A54AA6E8 /* Pods_RedsoTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DAD80A64A78A43E9C10AE4 /* Pods_RedsoTestTests.framework */; };
+		3D4F4F52D99C2AFCADA9EC55 /* Pods_RedsoTest_RedsoTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFA4C0339AA830E40F5712C /* Pods_RedsoTest_RedsoTestUITests.framework */; };
+		BA85A87C23A8F7D3006D14DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A87B23A8F7D3006D14DE /* AppDelegate.swift */; };
+		BA85A87E23A8F7D3006D14DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A87D23A8F7D3006D14DE /* SceneDelegate.swift */; };
+		BA85A88023A8F7D3006D14DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A87F23A8F7D3006D14DE /* ViewController.swift */; };
+		BA85A88323A8F7D3006D14DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA85A88123A8F7D3006D14DE /* Main.storyboard */; };
+		BA85A88523A8F7D3006D14DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA85A88423A8F7D3006D14DE /* Assets.xcassets */; };
+		BA85A88823A8F7D3006D14DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA85A88623A8F7D3006D14DE /* LaunchScreen.storyboard */; };
+		BA85A89323A8F7D3006D14DE /* RedsoTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A89223A8F7D3006D14DE /* RedsoTestTests.swift */; };
+		BA85A89E23A8F7D3006D14DE /* RedsoTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A89D23A8F7D3006D14DE /* RedsoTestUITests.swift */; };
+		BA85A8AF23A8FB56006D14DE /* ProfileDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8AD23A8FB56006D14DE /* ProfileDataResult.swift */; };
+		BA85A8B023A8FB56006D14DE /* ProfileDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8AE23A8FB56006D14DE /* ProfileDatas.swift */; };
+		BA85A8B323A8FC33006D14DE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8B223A8FC33006D14DE /* Network.swift */; };
+		BA85A8B623A90A01006D14DE /* CatalogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8B523A90A01006D14DE /* CatalogAPI.swift */; };
+		BA85A8B923A91399006D14DE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8B823A91399006D14DE /* ViewModel.swift */; };
+		BA85A8BC23A9161F006D14DE /* ViewWithTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8BB23A9161F006D14DE /* ViewWithTableView.swift */; };
+		BA85A8BE23A9183C006D14DE /* ViewWithTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA85A8BD23A9183C006D14DE /* ViewWithTableView.xib */; };
+		BA85A8C223A91995006D14DE /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8C023A91995006D14DE /* ProfileTableViewCell.swift */; };
+		BA85A8C323A91995006D14DE /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA85A8C123A91995006D14DE /* ProfileTableViewCell.xib */; };
+		BA85A8C623A91C68006D14DE /* Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8C523A91C68006D14DE /* Extension .swift */; };
+		BA85A8C923A9D4B8006D14DE /* ImageViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8C723A9D4B8006D14DE /* ImageViewTableViewCell.swift */; };
+		BA85A8CA23A9D4B8006D14DE /* ImageViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA85A8C823A9D4B8006D14DE /* ImageViewTableViewCell.xib */; };
+		BA85A8CD23A9E557006D14DE /* SelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8CC23A9E557006D14DE /* SelectedView.swift */; };
+		BA85A8CF23A9E563006D14DE /* SelectedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA85A8CE23A9E563006D14DE /* SelectedView.xib */; };
+		BA85A8D123AA005D006D14DE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85A8D023AA005D006D14DE /* BaseViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA85A88F23A8F7D3006D14DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA85A87023A8F7D2006D14DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA85A87723A8F7D3006D14DE;
+			remoteInfo = RedsoTest;
+		};
+		BA85A89A23A8F7D3006D14DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA85A87023A8F7D2006D14DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA85A87723A8F7D3006D14DE;
+			remoteInfo = RedsoTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06A289F0199E3A43E21C90D1 /* Pods-RedsoTest-RedsoTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedsoTest-RedsoTestUITests.release.xcconfig"; path = "Target Support Files/Pods-RedsoTest-RedsoTestUITests/Pods-RedsoTest-RedsoTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1FFA4C0339AA830E40F5712C /* Pods_RedsoTest_RedsoTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedsoTest_RedsoTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		257F58AD60C25CF56D5ACCF9 /* Pods-RedsoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedsoTest.release.xcconfig"; path = "Target Support Files/Pods-RedsoTest/Pods-RedsoTest.release.xcconfig"; sourceTree = "<group>"; };
+		283962762057A0A70473C26B /* Pods-RedsoTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedsoTestTests.release.xcconfig"; path = "Target Support Files/Pods-RedsoTestTests/Pods-RedsoTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		3557145962ED2060AD507441 /* Pods-RedsoTest-RedsoTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedsoTest-RedsoTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-RedsoTest-RedsoTestUITests/Pods-RedsoTest-RedsoTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		67FE2820AA7950F4A0FA2FD1 /* Pods_RedsoTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedsoTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		688AA56FB6D1895B118D7B19 /* Pods-RedsoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedsoTest.debug.xcconfig"; path = "Target Support Files/Pods-RedsoTest/Pods-RedsoTest.debug.xcconfig"; sourceTree = "<group>"; };
+		8B64FA06F66D78A021F6EA81 /* Pods-RedsoTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedsoTestTests.debug.xcconfig"; path = "Target Support Files/Pods-RedsoTestTests/Pods-RedsoTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3DAD80A64A78A43E9C10AE4 /* Pods_RedsoTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedsoTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA85A87823A8F7D3006D14DE /* RedsoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedsoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA85A87B23A8F7D3006D14DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA85A87D23A8F7D3006D14DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BA85A87F23A8F7D3006D14DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA85A88223A8F7D3006D14DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA85A88423A8F7D3006D14DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA85A88723A8F7D3006D14DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA85A88923A8F7D3006D14DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA85A88E23A8F7D3006D14DE /* RedsoTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedsoTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA85A89223A8F7D3006D14DE /* RedsoTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedsoTestTests.swift; sourceTree = "<group>"; };
+		BA85A89423A8F7D3006D14DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA85A89923A8F7D3006D14DE /* RedsoTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedsoTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA85A89D23A8F7D3006D14DE /* RedsoTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedsoTestUITests.swift; sourceTree = "<group>"; };
+		BA85A89F23A8F7D3006D14DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA85A8AD23A8FB56006D14DE /* ProfileDataResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDataResult.swift; sourceTree = "<group>"; };
+		BA85A8AE23A8FB56006D14DE /* ProfileDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDatas.swift; sourceTree = "<group>"; };
+		BA85A8B223A8FC33006D14DE /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		BA85A8B523A90A01006D14DE /* CatalogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogAPI.swift; sourceTree = "<group>"; };
+		BA85A8B823A91399006D14DE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BA85A8BB23A9161F006D14DE /* ViewWithTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithTableView.swift; sourceTree = "<group>"; };
+		BA85A8BD23A9183C006D14DE /* ViewWithTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewWithTableView.xib; sourceTree = "<group>"; };
+		BA85A8C023A91995006D14DE /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		BA85A8C123A91995006D14DE /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		BA85A8C523A91C68006D14DE /* Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension .swift"; sourceTree = "<group>"; };
+		BA85A8C723A9D4B8006D14DE /* ImageViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewTableViewCell.swift; sourceTree = "<group>"; };
+		BA85A8C823A9D4B8006D14DE /* ImageViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewTableViewCell.xib; sourceTree = "<group>"; };
+		BA85A8CC23A9E557006D14DE /* SelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedView.swift; sourceTree = "<group>"; };
+		BA85A8CE23A9E563006D14DE /* SelectedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedView.xib; sourceTree = "<group>"; };
+		BA85A8D023AA005D006D14DE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA85A87523A8F7D3006D14DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				126140CBBCEF83D919AFDBBF /* Pods_RedsoTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA85A88B23A8F7D3006D14DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36BF0C80B33A36E5A54AA6E8 /* Pods_RedsoTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA85A89623A8F7D3006D14DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4F4F52D99C2AFCADA9EC55 /* Pods_RedsoTest_RedsoTestUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		367E0971A834E922747AD564 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67FE2820AA7950F4A0FA2FD1 /* Pods_RedsoTest.framework */,
+				1FFA4C0339AA830E40F5712C /* Pods_RedsoTest_RedsoTestUITests.framework */,
+				B3DAD80A64A78A43E9C10AE4 /* Pods_RedsoTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C7017E30166335086B33521 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				688AA56FB6D1895B118D7B19 /* Pods-RedsoTest.debug.xcconfig */,
+				257F58AD60C25CF56D5ACCF9 /* Pods-RedsoTest.release.xcconfig */,
+				3557145962ED2060AD507441 /* Pods-RedsoTest-RedsoTestUITests.debug.xcconfig */,
+				06A289F0199E3A43E21C90D1 /* Pods-RedsoTest-RedsoTestUITests.release.xcconfig */,
+				8B64FA06F66D78A021F6EA81 /* Pods-RedsoTestTests.debug.xcconfig */,
+				283962762057A0A70473C26B /* Pods-RedsoTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA85A86F23A8F7D2006D14DE = {
+			isa = PBXGroup;
+			children = (
+				BA85A87A23A8F7D3006D14DE /* RedsoTest */,
+				BA85A89123A8F7D3006D14DE /* RedsoTestTests */,
+				BA85A89C23A8F7D3006D14DE /* RedsoTestUITests */,
+				BA85A87923A8F7D3006D14DE /* Products */,
+				4C7017E30166335086B33521 /* Pods */,
+				367E0971A834E922747AD564 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BA85A87923A8F7D3006D14DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A87823A8F7D3006D14DE /* RedsoTest.app */,
+				BA85A88E23A8F7D3006D14DE /* RedsoTestTests.xctest */,
+				BA85A89923A8F7D3006D14DE /* RedsoTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA85A87A23A8F7D3006D14DE /* RedsoTest */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A8C423A91C57006D14DE /* Extension */,
+				BA85A8BA23A915F6006D14DE /* View */,
+				BA85A8B723A91376006D14DE /* ViewModel */,
+				BA85A8B123A8FB78006D14DE /* Network */,
+				BA85A8AC23A8F89C006D14DE /* Model */,
+				BA85A8AB23A8F884006D14DE /* Controller */,
+				BA85A87B23A8F7D3006D14DE /* AppDelegate.swift */,
+				BA85A87D23A8F7D3006D14DE /* SceneDelegate.swift */,
+				BA85A88123A8F7D3006D14DE /* Main.storyboard */,
+				BA85A88423A8F7D3006D14DE /* Assets.xcassets */,
+				BA85A88623A8F7D3006D14DE /* LaunchScreen.storyboard */,
+				BA85A88923A8F7D3006D14DE /* Info.plist */,
+			);
+			path = RedsoTest;
+			sourceTree = "<group>";
+		};
+		BA85A89123A8F7D3006D14DE /* RedsoTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A89223A8F7D3006D14DE /* RedsoTestTests.swift */,
+				BA85A89423A8F7D3006D14DE /* Info.plist */,
+			);
+			path = RedsoTestTests;
+			sourceTree = "<group>";
+		};
+		BA85A89C23A8F7D3006D14DE /* RedsoTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A89D23A8F7D3006D14DE /* RedsoTestUITests.swift */,
+				BA85A89F23A8F7D3006D14DE /* Info.plist */,
+			);
+			path = RedsoTestUITests;
+			sourceTree = "<group>";
+		};
+		BA85A8AB23A8F884006D14DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A87F23A8F7D3006D14DE /* ViewController.swift */,
+				BA85A8D023AA005D006D14DE /* BaseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA85A8AC23A8F89C006D14DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A8AD23A8FB56006D14DE /* ProfileDataResult.swift */,
+				BA85A8AE23A8FB56006D14DE /* ProfileDatas.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA85A8B123A8FB78006D14DE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A8B423A909EF006D14DE /* CatalogAPI */,
+				BA85A8B223A8FC33006D14DE /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BA85A8B423A909EF006D14DE /* CatalogAPI */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A8B523A90A01006D14DE /* CatalogAPI.swift */,
+			);
+			path = CatalogAPI;
+			sourceTree = "<group>";
+		};
+		BA85A8B723A91376006D14DE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A8B823A91399006D14DE /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BA85A8BA23A915F6006D14DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A8CB23A9E53E006D14DE /* SelectedView */,
+				BA85A8BF23A91987006D14DE /* TableViewCell */,
+				BA85A8BB23A9161F006D14DE /* ViewWithTableView.swift */,
+				BA85A8BD23A9183C006D14DE /* ViewWithTableView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA85A8BF23A91987006D14DE /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A8C023A91995006D14DE /* ProfileTableViewCell.swift */,
+				BA85A8C123A91995006D14DE /* ProfileTableViewCell.xib */,
+				BA85A8C723A9D4B8006D14DE /* ImageViewTableViewCell.swift */,
+				BA85A8C823A9D4B8006D14DE /* ImageViewTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		BA85A8C423A91C57006D14DE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A8C523A91C68006D14DE /* Extension .swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BA85A8CB23A9E53E006D14DE /* SelectedView */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A8CC23A9E557006D14DE /* SelectedView.swift */,
+				BA85A8CE23A9E563006D14DE /* SelectedView.xib */,
+			);
+			path = SelectedView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA85A87723A8F7D3006D14DE /* RedsoTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA85A8A223A8F7D3006D14DE /* Build configuration list for PBXNativeTarget "RedsoTest" */;
+			buildPhases = (
+				2B6A9641B36FBBA22F1A7F59 /* [CP] Check Pods Manifest.lock */,
+				BA85A87423A8F7D3006D14DE /* Sources */,
+				BA85A87523A8F7D3006D14DE /* Frameworks */,
+				BA85A87623A8F7D3006D14DE /* Resources */,
+				3E0FC8108057BA1E381DB72F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedsoTest;
+			productName = RedsoTest;
+			productReference = BA85A87823A8F7D3006D14DE /* RedsoTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA85A88D23A8F7D3006D14DE /* RedsoTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA85A8A523A8F7D3006D14DE /* Build configuration list for PBXNativeTarget "RedsoTestTests" */;
+			buildPhases = (
+				5B38600E621FBD4A05BCF31A /* [CP] Check Pods Manifest.lock */,
+				BA85A88A23A8F7D3006D14DE /* Sources */,
+				BA85A88B23A8F7D3006D14DE /* Frameworks */,
+				BA85A88C23A8F7D3006D14DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA85A89023A8F7D3006D14DE /* PBXTargetDependency */,
+			);
+			name = RedsoTestTests;
+			productName = RedsoTestTests;
+			productReference = BA85A88E23A8F7D3006D14DE /* RedsoTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA85A89823A8F7D3006D14DE /* RedsoTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA85A8A823A8F7D3006D14DE /* Build configuration list for PBXNativeTarget "RedsoTestUITests" */;
+			buildPhases = (
+				CDBDFB984C073D5420631789 /* [CP] Check Pods Manifest.lock */,
+				BA85A89523A8F7D3006D14DE /* Sources */,
+				BA85A89623A8F7D3006D14DE /* Frameworks */,
+				BA85A89723A8F7D3006D14DE /* Resources */,
+				191B7DAD382BBBC418BA3DAE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA85A89B23A8F7D3006D14DE /* PBXTargetDependency */,
+			);
+			name = RedsoTestUITests;
+			productName = RedsoTestUITests;
+			productReference = BA85A89923A8F7D3006D14DE /* RedsoTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA85A87023A8F7D2006D14DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = jamba;
+				TargetAttributes = {
+					BA85A87723A8F7D3006D14DE = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					BA85A88D23A8F7D3006D14DE = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = BA85A87723A8F7D3006D14DE;
+					};
+					BA85A89823A8F7D3006D14DE = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = BA85A87723A8F7D3006D14DE;
+					};
+				};
+			};
+			buildConfigurationList = BA85A87323A8F7D2006D14DE /* Build configuration list for PBXProject "RedsoTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA85A86F23A8F7D2006D14DE;
+			productRefGroup = BA85A87923A8F7D3006D14DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA85A87723A8F7D3006D14DE /* RedsoTest */,
+				BA85A88D23A8F7D3006D14DE /* RedsoTestTests */,
+				BA85A89823A8F7D3006D14DE /* RedsoTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA85A87623A8F7D3006D14DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA85A8CF23A9E563006D14DE /* SelectedView.xib in Resources */,
+				BA85A8BE23A9183C006D14DE /* ViewWithTableView.xib in Resources */,
+				BA85A8C323A91995006D14DE /* ProfileTableViewCell.xib in Resources */,
+				BA85A88823A8F7D3006D14DE /* LaunchScreen.storyboard in Resources */,
+				BA85A88523A8F7D3006D14DE /* Assets.xcassets in Resources */,
+				BA85A8CA23A9D4B8006D14DE /* ImageViewTableViewCell.xib in Resources */,
+				BA85A88323A8F7D3006D14DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA85A88C23A8F7D3006D14DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA85A89723A8F7D3006D14DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		191B7DAD382BBBC418BA3DAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedsoTest-RedsoTestUITests/Pods-RedsoTest-RedsoTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedsoTest-RedsoTestUITests/Pods-RedsoTest-RedsoTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RedsoTest-RedsoTestUITests/Pods-RedsoTest-RedsoTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B6A9641B36FBBA22F1A7F59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RedsoTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E0FC8108057BA1E381DB72F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedsoTest/Pods-RedsoTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedsoTest/Pods-RedsoTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RedsoTest/Pods-RedsoTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B38600E621FBD4A05BCF31A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RedsoTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDBDFB984C073D5420631789 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RedsoTest-RedsoTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA85A87423A8F7D3006D14DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA85A8AF23A8FB56006D14DE /* ProfileDataResult.swift in Sources */,
+				BA85A8CD23A9E557006D14DE /* SelectedView.swift in Sources */,
+				BA85A88023A8F7D3006D14DE /* ViewController.swift in Sources */,
+				BA85A8B323A8FC33006D14DE /* Network.swift in Sources */,
+				BA85A8B623A90A01006D14DE /* CatalogAPI.swift in Sources */,
+				BA85A8D123AA005D006D14DE /* BaseViewController.swift in Sources */,
+				BA85A8C923A9D4B8006D14DE /* ImageViewTableViewCell.swift in Sources */,
+				BA85A8BC23A9161F006D14DE /* ViewWithTableView.swift in Sources */,
+				BA85A8C223A91995006D14DE /* ProfileTableViewCell.swift in Sources */,
+				BA85A8C623A91C68006D14DE /* Extension .swift in Sources */,
+				BA85A8B023A8FB56006D14DE /* ProfileDatas.swift in Sources */,
+				BA85A87C23A8F7D3006D14DE /* AppDelegate.swift in Sources */,
+				BA85A8B923A91399006D14DE /* ViewModel.swift in Sources */,
+				BA85A87E23A8F7D3006D14DE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA85A88A23A8F7D3006D14DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA85A89323A8F7D3006D14DE /* RedsoTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA85A89523A8F7D3006D14DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA85A89E23A8F7D3006D14DE /* RedsoTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA85A89023A8F7D3006D14DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA85A87723A8F7D3006D14DE /* RedsoTest */;
+			targetProxy = BA85A88F23A8F7D3006D14DE /* PBXContainerItemProxy */;
+		};
+		BA85A89B23A8F7D3006D14DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA85A87723A8F7D3006D14DE /* RedsoTest */;
+			targetProxy = BA85A89A23A8F7D3006D14DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA85A88123A8F7D3006D14DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA85A88223A8F7D3006D14DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA85A88623A8F7D3006D14DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA85A88723A8F7D3006D14DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA85A8A023A8F7D3006D14DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA85A8A123A8F7D3006D14DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA85A8A323A8F7D3006D14DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 688AA56FB6D1895B118D7B19 /* Pods-RedsoTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZLR7LH6227;
+				INFOPLIST_FILE = RedsoTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test123.RedsoTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA85A8A423A8F7D3006D14DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 257F58AD60C25CF56D5ACCF9 /* Pods-RedsoTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZLR7LH6227;
+				INFOPLIST_FILE = RedsoTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test123.RedsoTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA85A8A623A8F7D3006D14DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B64FA06F66D78A021F6EA81 /* Pods-RedsoTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LVJW6YG74;
+				INFOPLIST_FILE = RedsoTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.RedsoTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedsoTest.app/RedsoTest";
+			};
+			name = Debug;
+		};
+		BA85A8A723A8F7D3006D14DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 283962762057A0A70473C26B /* Pods-RedsoTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LVJW6YG74;
+				INFOPLIST_FILE = RedsoTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.RedsoTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedsoTest.app/RedsoTest";
+			};
+			name = Release;
+		};
+		BA85A8A923A8F7D3006D14DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3557145962ED2060AD507441 /* Pods-RedsoTest-RedsoTestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LVJW6YG74;
+				INFOPLIST_FILE = RedsoTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.RedsoTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RedsoTest;
+			};
+			name = Debug;
+		};
+		BA85A8AA23A8F7D3006D14DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06A289F0199E3A43E21C90D1 /* Pods-RedsoTest-RedsoTestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LVJW6YG74;
+				INFOPLIST_FILE = RedsoTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.RedsoTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RedsoTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA85A87323A8F7D2006D14DE /* Build configuration list for PBXProject "RedsoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA85A8A023A8F7D3006D14DE /* Debug */,
+				BA85A8A123A8F7D3006D14DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA85A8A223A8F7D3006D14DE /* Build configuration list for PBXNativeTarget "RedsoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA85A8A323A8F7D3006D14DE /* Debug */,
+				BA85A8A423A8F7D3006D14DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA85A8A523A8F7D3006D14DE /* Build configuration list for PBXNativeTarget "RedsoTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA85A8A623A8F7D3006D14DE /* Debug */,
+				BA85A8A723A8F7D3006D14DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA85A8A823A8F7D3006D14DE /* Build configuration list for PBXNativeTarget "RedsoTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA85A8A923A8F7D3006D14DE /* Debug */,
+				BA85A8AA23A8F7D3006D14DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA85A87023A8F7D2006D14DE /* Project object */;
+}
