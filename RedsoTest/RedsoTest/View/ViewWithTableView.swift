@@ -8,6 +8,7 @@
 
 import UIKit
 import ESPullToRefresh
+
 protocol ViewWithTableViewDataSource : NSObjectProtocol{
     func ViewWithTableViewNumberOfViewModel()->ViewModel
 }
@@ -30,7 +31,7 @@ class ViewWithTableView: UIView {
         self.addSubview(view)
     }
     override func awakeFromNib() {
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 180, right: 0)
+//        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 180, right: 0)
         tableView.register(UINib(nibName: ProfileTableViewCell.IdentifierString(), bundle: nil), forCellReuseIdentifier: ProfileTableViewCell.IdentifierString())
         tableView.register(UINib(nibName: ImageViewTableViewCell.IdentifierString(), bundle: nil), forCellReuseIdentifier: ImageViewTableViewCell.IdentifierString())
         tableView.delegate = self
@@ -41,49 +42,27 @@ class ViewWithTableView: UIView {
         
         self.tableView.es.addInfiniteScrolling { [unowned self] in
             self.viewModel.currentPageIndex = self.viewModel.currentPageIndex + 1
-            self.loadProfileAPI(viewModel: self.viewModel, loadMore: true, completion: { })
+
+            self.viewModel.loadProfileAPI(loadMore: true, completion: { 
+                self.reloadData()
+            })
         }
     }
     @objc func refreshPull(){
         viewModel.currentPageIndex = 0
-        loadProfileAPI(viewModel: viewModel, loadMore: false, completion: { })
+        
+        viewModel.loadProfileAPI(loadMore: false, completion: {
+             DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+             }
+        })
     }
-    
-    func loadProfileAPI(viewModel:ViewModel,loadMore:Bool, completion: @escaping () -> Void){
-        self.viewModel = viewModel
-        CatalogAPI.requestCatalogData(team: viewModel.selectedTeam, page: viewModel.currentPageIndex ) { (data) in
-                if loadMore {
-                    // Infinite load
-                    if data.results.count == 0 {
-                        self.viewModel.currentPageIndex = 0
-                        self.loadProfileAPI(viewModel: viewModel, loadMore: true, completion:{ })
-                    }else{
-                        for result in data.results {
-                              self.viewModel.profileData.results.append(result)
-                          }
-                    }
-                    self.loadData(profileDatas: viewModel.profileData)
-                    self.tableView.es.stopLoadingMore()
-                }
-                else{
-                    self.viewModel.profileData = data
-                    self.loadData(profileDatas: data)
-                    self.refreshControl.endRefreshing()
-            }
-            do {
-
-                // saving the entire list
-                try self.viewModel.profileData.save()
-
-            } catch { print(error) }
-            completion()
-         }
-     }
-     
-    private func loadData(profileDatas:ProfileData)  {
+         
+     func reloadData()  {
          DispatchQueue.main.async {
             self.tableView.reloadData()
-            self.tableView.layoutIfNeeded()
+            self.tableView.es.stopLoadingMore()
          }
      }
 

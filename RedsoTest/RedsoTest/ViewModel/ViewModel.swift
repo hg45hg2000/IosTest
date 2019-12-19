@@ -29,6 +29,29 @@ class ViewModel: NSObject , NSCoding{
     
     var currentPageIndex : Int = 0
     
-    
+    func loadProfileAPI(loadMore:Bool, completion: @escaping () -> Void){
+       CatalogAPI.requestCatalogData(team: selectedTeam, page: currentPageIndex ) { (data) in
+               if loadMore {
+                   // Infinite load
+                   if data.results.count == 0 {
+                       self.currentPageIndex = 0
+                       self.loadProfileAPI(loadMore: true, completion:{ })
+                   }else{
+                       for result in data.results {
+                             self.profileData.results.append(result)
+                         }
+                   }
+               }
+               else{
+                   self.profileData = data
+           }
+        do {
+               // saving the entire list
+            try self.profileData.save()
+
+           } catch { print(error) }
+           completion()
+        }
+    }
     
 }

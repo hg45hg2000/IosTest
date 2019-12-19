@@ -44,18 +44,20 @@ extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource,UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TableViewCollectionViewCell.IdentifierString(), for: indexPath) as! TableViewCollectionViewCell
-        var viewModel = viewModelList.viewModelList[indexPath.row]
+        let viewModel = viewModelList.viewModelList[indexPath.row]
+        cell.viewWithTableView.viewModel = viewModel
         if viewModel.profileData == nil {
-            cell.viewWithTableView.loadProfileAPI(viewModel: viewModel, loadMore: false, completion: {
-            
+            viewModel.loadProfileAPI(loadMore: false, completion: {
+                cell.viewWithTableView.reloadData()
             } )
+            
         }
         return cell
     }
     
     @available(iOS 6.0, *)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        return collectionView.frame.size
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
     @available(iOS 6.0, *)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
