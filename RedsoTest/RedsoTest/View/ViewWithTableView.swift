@@ -55,6 +55,7 @@ class ViewWithTableView: UIView {
              DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+                self.tableView.es.stopLoadingMore()
              }
         })
     }

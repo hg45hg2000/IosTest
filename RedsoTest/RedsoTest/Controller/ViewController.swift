@@ -22,8 +22,6 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         topSelectedView.delegate = self
-        
-        viewModelList = ViewModelList.initLocalData() ?? ViewModelList()
     }
     
             

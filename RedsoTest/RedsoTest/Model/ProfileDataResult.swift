@@ -60,7 +60,7 @@ struct ProfileDataResult  : Codable {
 			dictionary["position"] = position
 		}
 		if type != nil{
-			dictionary["type"] = type
+            dictionary["type"] = type.rawValue
 		}
 		if url != nil{
 			dictionary["url"] = url

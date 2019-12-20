@@ -18,7 +18,7 @@ class Network: NSObject {
     private override init() {
     
     }
-    func request(url:String,par:Parameters?, header:HTTPHeaders?, completion: @escaping (Any) -> Void) {
+    func request(url:String,par:Parameters?, header:HTTPHeaders?, completion: @escaping (Any) -> Void, failure: @escaping (AFError) -> Void) {
         DispatchQueue.global().async {
             
             let Url = self.domain + url
@@ -29,6 +29,7 @@ class Network: NSObject {
                             completion(value)
                         }
                     case .failure(let error):
+                        failure(error)
                         print(error)
                     }
             }
