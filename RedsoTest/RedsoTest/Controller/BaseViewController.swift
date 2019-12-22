@@ -12,7 +12,7 @@ class BaseViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.barTintColor = UIColor.brown
+        navigationBar.barTintColor = UIColor.clear
         // Do any additional setup after loading the view.
     }
     

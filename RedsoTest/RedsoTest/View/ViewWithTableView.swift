@@ -29,9 +29,10 @@ class ViewWithTableView: UIView {
         // adding the top level view to the view hierarchy
         let view = (Bundle.main.loadNibNamed(ViewWithTableView.IdentifierString(), owner: self, options: nil)![0])as! UIView
         self.addSubview(view)
+        view.frame = bounds
     }
     override func awakeFromNib() {
-//        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 180, right: 0)
+        self.layoutIfNeeded()
         tableView.register(UINib(nibName: ProfileTableViewCell.IdentifierString(), bundle: nil), forCellReuseIdentifier: ProfileTableViewCell.IdentifierString())
         tableView.register(UINib(nibName: ImageViewTableViewCell.IdentifierString(), bundle: nil), forCellReuseIdentifier: ImageViewTableViewCell.IdentifierString())
         tableView.delegate = self
@@ -53,9 +54,8 @@ class ViewWithTableView: UIView {
         
         viewModel.loadProfileAPI(loadMore: false, completion: {
              DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self.reloadData()
                 self.refreshControl.endRefreshing()
-                self.tableView.es.stopLoadingMore()
              }
         })
     }
@@ -108,5 +108,4 @@ extension ViewWithTableView : UITableViewDelegate,UITableViewDataSource{
             return 0
         }
     }
-    
 }

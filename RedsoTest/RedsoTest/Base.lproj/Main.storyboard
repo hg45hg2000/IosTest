@@ -41,7 +41,7 @@
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ufU-vv-kdE">
                                 <rect key="frame" x="0.0" y="168" width="414" height="728"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4YB-gQ-Swl">
                                     <size key="itemSize" width="95" height="71"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -51,7 +51,7 @@
                                 <cells/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" name="systemBrownColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.28082132581526853" green="0.24701686119182048" blue="0.24463237957398545" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="xmB-HE-0ww" firstAttribute="bottom" secondItem="ufU-vv-kdE" secondAttribute="bottom" constant="-34" id="Lrv-CD-HyL"/>
                             <constraint firstItem="QZd-En-msQ" firstAttribute="leading" secondItem="xmB-HE-0ww" secondAttribute="leading" id="Nd1-4z-6rh"/>

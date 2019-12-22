@@ -31,8 +31,9 @@ class SelectedView: UIView {
     required init(coder aDecoder: NSCoder) {
          super.init(coder: aDecoder)!
          // adding the top level view to the view hierarchy
-         let view = (Bundle.main.loadNibNamed(SelectedView.IdentifierString(), owner: self, options: nil)![0])
-         self.addSubview(view as! UIView)
+         let view = (Bundle.main.loadNibNamed(SelectedView.IdentifierString(), owner: self, options: nil)![0])as! UIView
+         self.addSubview(view)
+         view.frame = bounds
      }
     
     @IBAction func buttonPress(_ sender: UIButton) {
